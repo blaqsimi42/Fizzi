@@ -5,7 +5,6 @@ import { repositoryName } from "@/prismicio";
 
 import "./app.css";
 import Header from '@/components/Header';
-import { Children } from 'react';
 import ViewCanvas from '@/components/ViewCanvas';
 
 
