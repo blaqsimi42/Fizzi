@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React from "react";
 import clsx from "clsx";
 
 type IntrinsicElement = keyof JSX.IntrinsicElements;
@@ -7,7 +7,7 @@ type BoundedProps<T extends IntrinsicElement> = {
   as?: T;
   className?: string;
   children?: React.ReactNode;
-} & React.ComponentPropsWithoutRef<T>;
+} & Omit<React.ComponentPropsWithoutRef<T>, "className" | "children" | "as">;
 
 export function Bounded<T extends IntrinsicElement = "section">({
   as,
@@ -17,7 +17,7 @@ export function Bounded<T extends IntrinsicElement = "section">({
 }: BoundedProps<T>) {
   const Comp = as || "section";
   return (
-    <Comp className={clsx("px-4 first:pt-10 md:px-6", className)} {...restProps}>
+    <Comp className={clsx("px-4 first:pt-10 md:px-6", className)} {...(restProps as any)}>
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
         {children}
       </div>
