@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { JSX } from "react";
@@ -26,7 +27,10 @@ const BigText = ({ slice }: BigTextProps): JSX.Element => {
         </div>
         <div className="text-[32vw]">Smile</div>
       </h2>
+
+      <Footer />
     </section>
+    
   );
 };
 
