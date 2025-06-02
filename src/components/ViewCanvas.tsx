@@ -10,7 +10,7 @@ const Loader = dynamic(
   ()=> import ("@react-three/drei").then((mod) => mod.Loader),{ ssr: false},
 );
 
-type Props = {}
+type Props = Record<string, never>;
 
 export default function ViewCanvas({}: Props) {
   return (

@@ -15,7 +15,7 @@ import { useStore } from "@/hooks/useStore";
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 
-type Props = {}
+type Props = Record<string, never>;
 
 export default function Scene({}: Props) {
 
