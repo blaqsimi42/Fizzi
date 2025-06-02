@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, JSX } from "react";
+import { JSX } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
