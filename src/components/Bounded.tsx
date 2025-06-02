@@ -1,13 +1,15 @@
-import React from "react";
+import React, { JSX } from "react";
 import clsx from "clsx";
 
-type BoundedProps<T extends React.ElementType> = {
+type IntrinsicElement = keyof JSX.IntrinsicElements;
+
+type BoundedProps<T extends IntrinsicElement> = {
   as?: T;
   className?: string;
   children?: React.ReactNode;
 } & React.ComponentPropsWithoutRef<T>;
 
-export function Bounded<T extends React.ElementType = "section">({
+export function Bounded<T extends IntrinsicElement = "section">({
   as,
   className,
   children,
